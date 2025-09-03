@@ -88,9 +88,6 @@ else:
         st.write("---")
         
         if best_match["filename"] is not None:
-            st.success(f"Gambar yang paling mirip adalah **{best_match['filename']}** dengan Jarak: `{best_match['distance']:.2f}`")
-            st.subheader("Gambar Paling Mirip")
-            st.image(best_match["image"], channels="BGR", caption=best_match["filename"])
             if best_match["filename"] == "indomi.jpg":
                 st.subheader("Gambar diatas adalah Indomie Goreng seleraku😋😋")
             if best_match["filename"] == "deodorant.jpg":
@@ -103,5 +100,10 @@ else:
                 st.subheader("Gambar diatas adalah Tipe-x")
             if best_match["filename"] == "wancuh.jpg":
                 st.subheader("Gambar diatas adalah Sendok nasi")
+            if best_match["filename"] == "masAndi.png":
+                st.subheader("Gambar diatas adalah Mas Andi Tsundere👉👈")
+            st.success(f"Gambar yang paling mirip adalah **{best_match['filename']}** dengan Jarak: `{best_match['distance']:.2f}`")
+            st.subheader("Gambar Paling Mirip")
+            st.image(best_match["image"], channels="BGR", caption=best_match["filename"])
         else:
             st.error("Tidak dapat menemukan kecocokan yang valid.")
