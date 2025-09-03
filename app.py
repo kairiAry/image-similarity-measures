@@ -91,13 +91,17 @@ else:
             st.success(f"Gambar yang paling mirip adalah **{best_match['filename']}** dengan Jarak: `{best_match['distance']:.2f}`")
             st.subheader("Gambar Paling Mirip")
             st.image(best_match["image"], channels="BGR", caption=best_match["filename"])
-            if best_match["filename"] == "Silent Witch.png":
-                st.subheader("Gambar diatas adalah Monica Everest")
-            if best_match["filename"] == "Castorice.png":
-                st.subheader("Gambar diatas adalah Castorice")
-            if best_match["filename"] == "Castorice2.png":
-                st.subheader("Gambar diatas adalah Castorice")
-            if best_match["filename"] == "Castorice3.png":
-                st.subheader("Gambar diatas adalah Castorice")
+            if best_match["filename"] == "indomi.jpg":
+                st.subheader("Gambar diatas adalah Indomie Goreng seleraku😋😋")
+            if best_match["filename"] == "deodorant.jpg":
+                st.subheader("Gambar diatas adalah Deodorant")
+            if best_match["filename"] == "mouse.jpg":
+                st.subheader("Gambar diatas adalah Mouse")
+            if best_match["filename"] == "pulpen.jpg":
+                st.subheader("Gambar diatas adalah Pulpen")
+            if best_match["filename"] == "tipex.jpg":
+                st.subheader("Gambar diatas adalah Tipe-x")
+            if best_match["filename"] == "wancuh.jpg":
+                st.subheader("Gambar diatas adalah Sendok nasi")
         else:
             st.error("Tidak dapat menemukan kecocokan yang valid.")
